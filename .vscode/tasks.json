@@ -1,0 +1,34 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build Snake Game",
+            "command": "D:\\VSCode\\MinGW\\MSYS2\\ucrt64\\bin\\g++.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-std=c++17",
+                "-g",
+                "${workspaceFolder}/src/Game.cpp",
+                "${workspaceFolder}/src/Snake.cpp",
+                "${workspaceFolder}/src/UI.cpp",
+                "${workspaceFolder}/src/main.cpp",
+                "-I", "${workspaceFolder}/src/include", 
+                "-L", "${workspaceFolder}/src/lib",
+                "-o", "${workspaceFolder}/snake_game.exe",
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_ttf"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}
